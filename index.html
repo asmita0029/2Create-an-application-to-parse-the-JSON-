@@ -1,0 +1,38 @@
+<form id="productForm">
+   <div id="step1">
+      <h2>Step 1: Select File</h2>
+      <input type="file" id="fileInput" accept=".csv, .json" />
+      <button type="button" onclick="nextStep()">Next</button>
+   </div>
+   <div id="step2" style="display: none;">
+      <h2>Step 2: Specify Format</h2>
+      <label for="fileType">File Type:</label>
+      <select id="fileType">
+        <option value="csv">CSV</option>
+        <option value="json">JSON</option>
+      </select>
+      <label for="encoding">Character Encoding:</label>
+      <select id="encoding">
+        <option value="utf-8">UTF-8</option>
+      </select>
+      <label for="delimiter">Delimiter:</label>
+      <select id="delimiter">
+        <option value=",">comma</option>
+      </select>
+      <label for="header">Has Header:</label>
+      <input type="checkbox" id="header" />
+      <button type="button" onclick="nextStep()">Next</button>
+      <button type="button" onclick="previousStep()">Back</button>
+   </div>
+   <div id="step3" style="display: none;">
+      <h2>Step 3: Display Handling</h2>
+      <p>Select the fields to be displayed:</p>
+      <label for="productId">Product Id</label>
+      <input type="checkbox" id="productId" />
+      <label for="subcategory">Subcategory</label>
+      <input type="checkbox" id="subcategory" />
+      <!-- Additional checkboxes for the remaining fields -->
+      <button type="submit">Import Products</button>
+      <button type="button" onclick="previousStep()">Back</button>
+   </div>
+  </form>
